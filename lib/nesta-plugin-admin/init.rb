@@ -7,7 +7,7 @@ module Nesta
         # Simple Authentication Helpers
         ########################################################################
         
-        # @throw [:half] on failure
+        # throw [:halt] on failure
         def protected!
           unless authorized? 
             response['WWW-Authenticate'] = %(Basic realm="Restricted Area")

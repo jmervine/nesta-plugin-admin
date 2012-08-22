@@ -4,8 +4,8 @@ require File.expand_path('../lib/nesta-plugin-admin/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Joshua Mervine"]
   gem.email         = ["joshua@mervine.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{An admin interface for Nesta.}
+  gem.summary       = %q{An admin interface for Nesta focusing around adding, removing and editing pages.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)

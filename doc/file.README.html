@@ -63,7 +63,20 @@
 
     <div id="content"><div id='filecontents'><h1>Nesta::Plugin::Admin</h1>
 
-<p>TODO: Write a gem description</p>
+<h3><a href="http://rubyops.github.com/doc/index.html">Documentation</a></h3>
+
+<p>An Admin interface for Nesta allowing currently allowing the following:</p>
+
+<ol>
+<li>Create new pages.</li>
+<li>Edit existing pages.</li>
+<li>Delete pages.</li>
+<li>Edit menu.txt.</li>
+</ol>
+
+
+<p>TODO:
+- Add config editor.</p>
 
 <h2>Installation</h2>
 
@@ -84,7 +97,25 @@
 
 <h2>Usage</h2>
 
-<p>TODO: Write usage instructions here</p>
+<ol>
+<li><p>Add a username and password to your config/config.yml</p>
+
+<pre class="code ruby"><code> # file: config/config.yml
+ username: foo
+ password: bar
+</code></pre></li>
+</ol>
+
+
+<blockquote><p>WARNING: I wouldn't commit these to git!</p></blockquote>
+
+<ol>
+<li><p>Restart your application.</p></li>
+<li><p>Visit: <a href="http://">http://</a><yoursite>/admin</p></li>
+<li><p>Login</p></li>
+<li><p>Happy Admining.</p></li>
+</ol>
+
 
 <h2>Contributing</h2>
 
@@ -99,7 +130,7 @@
 </div></div>
 
     <div id="footer">
-  Generated on Wed Aug 22 04:31:25 2012 by
+  Generated on Wed Aug 22 04:41:54 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>
