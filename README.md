@@ -11,6 +11,8 @@ An Admin interface for Nesta allowing currently allowing the following:
 
 TODO:
 - Add config editor.
+- Test with themes.
+- Test with other plugins.
 
 ## Installation
 
