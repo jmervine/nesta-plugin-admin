@@ -13,6 +13,7 @@ TODO:
 - Add config editor.
 - Add plugin viewer.
 - Add theme viewer and installer.
+- Add server restart? Maybe? Probably not, but maybe?
 
 
 ## Installation
