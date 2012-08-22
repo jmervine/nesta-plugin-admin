@@ -14,6 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "nesta-plugin-admin"
   gem.require_paths = ["lib"]
   gem.version       = Nesta::Plugin::Admin::VERSION
-  s.add_dependency("nesta", ">= 0.9.11")
-  s.add_development_dependency("rake")
+  gem.add_dependency("nesta", ">= 0.9.11")
+  gem.add_development_dependency("rake")
 end

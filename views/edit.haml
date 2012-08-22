@@ -1,0 +1,19 @@
+%form{:action=>"/admin/#{@path||'new'}", :method=>"post"}
+  #admin_content
+  - unless @path == "menu"
+    %label Page Path:
+    %br
+    %input.path{:type=>'text',:name=>'path',:value=>@path||''}>
+    %select{:name=>"format"}
+      - Nesta::FileModel::FORMATS.each do |format|
+        %option{:value=>format, :selected=>(@format==format)}= format
+    %br
+    %small (ex: article-name)
+  #contents
+    - unless @path == "menu"
+      %label Page Body:
+      %br
+    %textarea{:name=>'contents'}= @content||''
+  #buttons
+    %input.button{ :type => "button", "value" => "Cancel!", :onclick => "top.location.href='/admin';" }
+    %input.button{ :type => "submit", "value" => "Save!" }
