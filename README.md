@@ -11,7 +11,7 @@ An Admin interface for Nesta allowing currently allowing the following:
 4. Edit menu.txt.
 
 ### Known Issues:
-1. Admin interface is a bit wonky when using some themes.
+- Admin interface is a bit wonky when using some themes.
 
 ### TODOs:
 - Add config editor.
