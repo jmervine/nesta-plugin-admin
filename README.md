@@ -42,7 +42,7 @@ Or install it yourself as:
 
 2. Restart your application.
 
-3. Visit: http://<yoursite>/admin
+3. Visit: http://YOURSITE/admin
 
 4. Login
 
