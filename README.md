@@ -1,6 +1,16 @@
 # Nesta::Plugin::Admin
 
-TODO: Write a gem description
+### [Documentation](http://rubyops.github.com/doc/index.html)
+
+An Admin interface for Nesta allowing currently allowing the following:
+
+1. Create new pages.
+2. Edit existing pages.
+3. Delete pages.
+4. Edit menu.txt.
+
+TODO:
+- Add config editor.
 
 ## Installation
 
@@ -18,7 +28,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. Add a username and password to your config/config.yml
+
+        # file: config/config.yml
+        username: foo
+        password: bar
+
+> WARNING: I wouldn't commit these to git!
+
+2. Restart your application.
+
+3. Visit: http://<yoursite>/admin
+
+4. Login
+
+5. Happy Admining.
 
 ## Contributing
 
