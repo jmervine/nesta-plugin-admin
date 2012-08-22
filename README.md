@@ -1,6 +1,6 @@
 # Nesta::Plugin::Admin
 
-### [Documentation](http://rubyops.github.com/doc/index.html)
+### [Documentation](http://jmervine.github.com/doc/index.html)
 
 An Admin interface for Nesta allowing currently allowing the following:
 

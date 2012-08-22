@@ -7,4 +7,5 @@ end
 
 task :pages do
   puts %x{ git checkout gh-pages && git merge master && git push }
+  puts %x{ git checkout - }
 end
