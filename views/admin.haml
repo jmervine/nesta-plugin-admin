@@ -1,7 +1,8 @@
 #admin_links
-  %a{:href=>"/admin/new"}new page
-  %br
+  %a{:href=>"/admin/new"}new page |
   %a{:href=>"/admin/menu"}edit menu
+  %br
+  %br
 #admin_content
   - @pages.each do |page|
     %p.admin_page<
