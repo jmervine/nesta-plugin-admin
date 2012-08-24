@@ -4,7 +4,7 @@
   %a{:href=>"/admin/menu"}edit menu
 #admin_content
   - @pages.each do |page|
-    %section(role="main")<
+    %p.admin_page<
       %a{:href=>"/admin/#{page.path_for_admin}"}>edit
       &nbsp;|&nbsp;
       %a{:href=>"/admin/#{page.path_for_admin}/delete"}<delete
