@@ -4,15 +4,21 @@
 
 An Admin interface for Nesta allowing currently allowing the following:
 
+### Current Features:
 1. Create new pages.
 2. Edit existing pages.
 3. Delete pages.
 4. Edit menu.txt.
 
-TODO:
+### Known Issues:
+- Admin interface is a bit wonky when using some themes.
+
+### TODOs:
 - Add config editor.
-- Test with themes.
-- Test with other plugins.
+- Add plugin viewer.
+- Add theme viewer and installer.
+- Add server restart? Maybe? Probably not, but maybe?
+
 
 ## Installation
 
@@ -40,7 +46,7 @@ Or install it yourself as:
 
 2. Restart your application.
 
-3. Visit: http://<yoursite>/admin
+3. Visit: http://YOURSITE/admin
 
 4. Login
 
