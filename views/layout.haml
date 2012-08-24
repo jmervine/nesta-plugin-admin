@@ -63,10 +63,10 @@
       }
   %body
     #container
-      = admin_haml :header, :layout => false
+      = haml :header, :layout => false
       %hr
       %br
       = yield
       %br
-      = admin_haml :footer, :layout => false
+      = haml :footer, :layout => false
 

@@ -67,10 +67,20 @@
 
 <p>An Admin interface for Nesta allowing currently allowing the following:</p>
 
-<blockquote><p>Note: This is U-G-L-Y, as far as interfaces go. I am not an interface person.
+<h4>Note on the default admin interface</h4>
+
+<p>This is U-G-L-Y, as far as interfaces go. I am not an interface person.
 If you would like a cleaner, prettier interface, feel free to fork and update.
 If you do, please submit a pull request to me, I would like to make it better
-looking.</p></blockquote>
+looking.</p>
+
+<p>You can override this in two ways.</p>
+
+<p>First, locally by adding templates to APP_ROOT/views, to use this, you must add
+"admin_from_local: true" to your config/config.yml file.</p>
+
+<p>Second, via a theme by adding "admin_from_theme: true" to your config/config.yml
+file.</p>
 
 <h3>Current Features:</h3>
 
@@ -151,7 +161,7 @@ looking.</p></blockquote>
 </div></div>
 
     <div id="footer">
-  Generated on Fri Aug 24 02:46:16 2012 by
+  Generated on Fri Aug 24 13:13:51 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>

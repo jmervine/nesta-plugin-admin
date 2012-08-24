@@ -4,10 +4,20 @@
 
 An Admin interface for Nesta allowing currently allowing the following:
 
-> Note: This is U-G-L-Y, as far as interfaces go. I am not an interface person.
-> If you would like a cleaner, prettier interface, feel free to fork and update.
-> If you do, please submit a pull request to me, I would like to make it better
-> looking.
+#### Note on the default admin interface
+This is U-G-L-Y, as far as interfaces go. I am not an interface person.
+If you would like a cleaner, prettier interface, feel free to fork and update.
+If you do, please submit a pull request to me, I would like to make it better
+looking.
+
+You can override this in two ways. 
+
+First, locally by adding templates to APP_ROOT/views, to use this, you must add 
+"admin_from_local: true" to your config/config.yml file.
+
+Second, via a theme by adding "admin_from_theme: true" to your config/config.yml
+file.
+
 
 ### Current Features:
 1. Create new pages.
