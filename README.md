@@ -4,6 +4,11 @@
 
 An Admin interface for Nesta allowing currently allowing the following:
 
+> Note: This is U-G-L-Y, as far as interfaces go. I am not an interface person.
+> If you would like a cleaner, prettier interface, feel free to fork and update.
+> If you do, please submit a pull request to me, I would like to make it better
+> looking.
+
 ### Current Features:
 1. Create new pages.
 2. Edit existing pages.

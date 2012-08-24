@@ -249,10 +249,9 @@ it's a middleware.</p>
   <div class="discussion">
     
 <p>Override standard haml call to include special view location for  admin
-templates. I know, I know, this will break templating for admin views, but
-it's a small price to pay.</p>
+templates.</p>
 
-<p>TODO: figure out a way to somehow inject these in to standard view path</p>
+<p>This can be overriden by themes which contain admin.haml and/or edit.haml</p>
 
 
   </div>
@@ -284,15 +283,15 @@ it's a small price to pay.</p>
       <pre class="lines">
 
 
+70
 71
-72
-73</pre>
+72</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/nesta-plugin-admin/init.rb', line 71</span>
+      <pre class="code"><span class="info file"># File 'lib/nesta-plugin-admin/init.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_admin_haml'>admin_haml</span> <span class='id identifier rubyid_template'>template</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_haml'>haml</span> <span class='id identifier rubyid_template'>template</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>views:</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>../../views</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='label'>layout:</span> <span class='symbol'>:layout</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_haml'>haml</span> <span class='id identifier rubyid_template'>template</span><span class='comma'>,</span> <span class='lbrace'>{</span> <span class='label'>views:</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>../../views</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -564,7 +563,7 @@ it's a middleware.</p>
 </div>
 
     <div id="footer">
-  Generated on Wed Aug 22 04:49:19 2012 by
+  Generated on Fri Aug 24 02:45:32 2012 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.2.1 (ruby-1.9.3).
 </div>
