@@ -29,6 +29,9 @@ module Nesta
         # View Helpers
         ########################################################################
 
+        THEME_VIEWS = (Nesta::Config.theme ? File.expand_path(File.join('themes', Nesta::Config.theme, 'views'), Nesta::App.root) : false)
+        ADMIN_VIEWS = File.expand_path('../../views', File.dirname(__FILE__))
+
         # Taken from Nesta helpers, as they weren't available in the 
         # Admin because it's a middleware.
         #
@@ -62,14 +65,19 @@ module Nesta
         end
 
         # Override standard haml call to include special view location for 
-        # admin templates. I know, I know, this will break templating for admin
-        # views, but it's a small price to pay.
+        # admin templates. 
         #
-        # TODO: figure out a way to somehow inject these in to standard view path
+        # This can be overriden by themes which contain admin.haml and/or edit.haml
         #
         # @return [String] rendered html from haml
         def admin_haml template, options={}
-          haml template, { views: File.expand_path('../../views', File.dirname(__FILE__)), layout: :layout }.merge(options)
+          if THEME_VIEWS and File.exists?(File.join(THEME_VIEWS, "#{template}.haml")
+            STDOUT.puts "not mine"
+            haml template, options
+          else
+            STDOUT.puts "mine"
+            haml template, { views: ADMIN_VIEWS }.merge(options)
+          end
         end
       end
 
