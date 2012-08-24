@@ -1,14 +1,12 @@
-#admin_links
-  %a{:href=>"/admin/new"}new page
-  %br
-  %a{:href=>"/admin/menu"}edit menu
 #admin_content
+  %h4.admin_links
+    %a{:href=>"/admin/new"}new page
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    %a{:href=>"/admin/menu"}edit menu
   - @pages.each do |page|
-    %section(role="main")<
+    %p.admin_page<
       %a{:href=>"/admin/#{page.path_for_admin}"}>edit
       &nbsp;|&nbsp;
       %a{:href=>"/admin/#{page.path_for_admin}/delete"}<delete
       &nbsp;&nbsp;&nbsp;
       ="#{page.title_for_admin} (#{page.path_for_admin}.#{page.format})"
-    %br
-
