@@ -1,8 +1,8 @@
-%h4.admin_links
-  %a{:href=>"/admin/new"}new page
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-  %a{:href=>"/admin/menu"}edit menu
 #admin_content
+  %h4.admin_links
+    %a{:href=>"/admin/new"}new page
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    %a{:href=>"/admin/menu"}edit menu
   - @pages.each do |page|
     %p.admin_page<
       %a{:href=>"/admin/#{page.path_for_admin}"}>edit

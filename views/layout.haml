@@ -11,12 +11,13 @@
       %script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
       - local_stylesheet_link_tag('local')
     :css
-      #admin_links {
+      .admin_links {
         text-align: center;
         width: 100%;
       }
-      #admin_content { 
+      #content #admin_content {
         width: 100%;
+        float: none;
       }
       textarea {
         font-face: monospace;
