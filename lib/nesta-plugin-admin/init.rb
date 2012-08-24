@@ -61,15 +61,6 @@ module Nesta
           end
         end
 
-        # Override standard haml call to include special view location for 
-        # admin templates. 
-        #
-        # This can be overriden by themes which contain admin.haml and/or edit.haml
-        #
-        # @return [String] rendered html from haml
-        def admin_haml template, options={}
-          haml template, { views: File.expand_path('../../views', File.dirname(__FILE__)) }.merge(options)
-        end
       end
 
       ########################################################################
@@ -156,12 +147,20 @@ module Nesta
 
   # Adding username and password to settings list.
   class Config
-    @settings += %w[ username password ]
+    @settings += %w[ admin_from_local admin_from_theme username password ]
   end
 
   class AdminScreens < Sinatra::Base
     register Sinatra::Cache
     set :cache_enabled, false
+
+    if Nesta::Config.admin_from_theme
+      set :views, Nesta::Path.themes(Nesta::Config.theme, "views")
+    elsif Nesta::Config.admin_from_local
+      set :views, Nesta::Path.local("views")
+    else
+      set :views, File.expand_path("../../views", File.dirname(__FILE__))
+    end
 
     helpers Nesta::Plugin::Admin::Helpers
 
@@ -181,7 +180,7 @@ module Nesta
     get '/admin/new' do
       @action = "New Page"
       @path, @content = nil
-      admin_haml :edit
+      haml :edit
     end
 
     post '/admin/new' do
@@ -198,7 +197,7 @@ module Nesta
     get '/admin' do
       @action = "Pages"
       @pages = Nesta::Page.find_all.sort { |a,b| a.title_for_admin <=> b.title_for_admin }
-      admin_haml :admin
+      haml :admin
     end
 
     get '/admin/menu' do
@@ -206,7 +205,7 @@ module Nesta
       @path      = "menu"
       @format   = nil
       @content  = Nesta::Plugin::Admin.load_menu
-      admin_haml :edit
+      haml :edit
     end
 
     post '/admin/menu' do
@@ -224,7 +223,7 @@ module Nesta
       @action  = "Edit Template"
       @path    = File.join(params[:splat])
       @content, @format = Nesta::Plugin::Admin.load_raw @path
-      admin_haml :edit
+      haml :edit
     end
 
   end
